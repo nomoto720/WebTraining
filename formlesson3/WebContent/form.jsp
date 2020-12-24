@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="java.util.*"  %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/formlesson3/Result" method="post">
+<form action="/formlesson3/osOut" method="post">
 os:<br>
 <input type="checkbox" name="os" value="win" >Win<br>
 <input type="checkbox" name="os" value="mac" >Mac<br>

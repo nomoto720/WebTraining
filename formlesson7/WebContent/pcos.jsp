@@ -7,6 +7,7 @@
 <title>PC OS</title>
 </head>
 <body>
+
 <form action="/formlesson7/FromOS" method="post" >
 お使いのOSを選んでください<br>
 <input type="checkbox" name="os" value="win" >Win
@@ -14,6 +15,7 @@
 <input type="checkbox" name="os" value="linux" >Linux
 <input type="submit" value="送信">
 </form>
+
 
 </body>
 </html>
