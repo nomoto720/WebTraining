@@ -17,7 +17,7 @@
 </form>
 <% }else{
   String[] oss=request.getParameterValues("os");
-  String result=oss==null ? "[選択なし]":String.join(",",oss);
+  String result=oss==null ? "[選択なし]":String.join("",oss);
   %>
   <p><%=result %></p>
 <% } %>
