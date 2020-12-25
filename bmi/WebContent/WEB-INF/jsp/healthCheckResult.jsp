@@ -18,6 +18,6 @@
 BMI：<%=health.getBmi() %><br>
 体型：<%=health.getBodyType() %>
 </p>
-<a hrefo="/bmi/HealthCheck">戻る</a>
+<a href="/bmi/HealthCheck">戻る</a>
 </body>
 </html>
