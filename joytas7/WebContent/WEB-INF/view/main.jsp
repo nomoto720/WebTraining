@@ -38,7 +38,7 @@ String msg=(String)request.getAttribute("msg");
   </div>
   <button type="submit" class="btn btn-primary">登録</button>
 </form>
-<%if(list != null){%>
+<%if(list != null && list.size()>0){%>
 <table class="table table-striped mt-4">
 <tr><th>製品名</th><th>価格</th><th>登録日</th></tr>
 <%for(Product p:list) {%>
