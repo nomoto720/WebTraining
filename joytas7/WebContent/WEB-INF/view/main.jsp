@@ -42,7 +42,7 @@ String msg=(String)request.getAttribute("msg");
 <table class="table table-striped mt-4">
 <tr><th>製品名</th><th>価格</th><th>登録日</th></tr>
 <%for(Product p:list) {%>
-<tr><th><%=p.getName() %></th><td><%=String.format("%,3d円",Integer.parseInt(p.getPrice())) %></td><td><%=p.getUpdated() %></td></tr>
+<tr><th><%=p.getName() %></th><td><%=String.format("%,d円",Integer.parseInt(p.getPrice())) %></td><td><%=p.getUpdated() %></td></tr>
 <%} %>
 </table>
 <%} %>
