@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="model.*,java.util.*" %>
 <%
-	List<Vege>list=(List<Vege>)session.getAttribute("list");
-	String err=(String)request.getAttribute("err");
-	String msg=(String)request.getAttribute("msg");
+Cart cart=(Cart)session.getAttribute("cart");
+String err=(String)request.getAttribute("err");
+String msg=(String)request.getAttribute("msg");
 %>
 <!DOCTYPE html>
 <html>
@@ -37,12 +37,14 @@
 		</div>
 		<button type="submit" class="btn btn-primary">カートに追加</button>
 	</form>
-	<p>合計:<%=  %></p>
-	<%if(list != null && list.size()>0){%>
+	<%if(cart != null ){%>
+	<div class="alert alert-secondary float-right" role="alert">
+ 	<%=String.format("合計:%,d円",cart.getTotal()) %>
+	</div>
 		<table class="table table-striped mt-4">
 		<tr><th>商品名</th><th>価格</th></tr>
-		<%for(Vege v:list) {%>
-			<tr><th><%=v.getName() %></th><td><%=String.format("%,d円",Integer.parseInt(v.getPrice())) %></td></tr>
+		<%for(Vege v:cart.getList()) {%>
+		<tr><th><%=v.getName() %></th><td><%=String.format("%,d円",v.getPrice()) %></td></tr>
 		<%} %>
 		</table>
 	<%} %>

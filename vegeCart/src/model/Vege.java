@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class Vege implements Serializable {
 	private String name;
-	private String price;
+	private int price;
 	public Vege() {}
-	public Vege(String name,String price) {
+	public Vege(String name,int price) {
 		this.name=name;
 		this.price=price;
 	}
@@ -16,10 +16,10 @@ public class Vege implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 
