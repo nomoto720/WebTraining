@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="model.Mutter,java.util.*"%>
 <%@ page import="model.User,model.Mutter,java.util.List" %>
 <%
 User loginUser=(User)session.getAttribute("loginUser");
-List<Mutter>mutterList=(List<Mutter>) application.getAttribute("mutterList");
+List<Mutter>list=(List<Mutter>)request.getAttribute("mutterList");
 String errorMsg=(String)request.getAttribute("errorMsg");
 %>
 <!DOCTYPE html>
@@ -26,8 +26,8 @@ String errorMsg=(String)request.getAttribute("errorMsg");
 <% if(errorMsg !=null){ %>
 <p><%=errorMsg %></p>
 <% } %>
-<% for(Mutter mutter:mutterList){ %>
-	<p><%=mutter.getUserName() %>:<%=mutter.getText() %></p>
+<% for(Mutter m:list){ %>
+	<p><%=m.getUserName() %>:<%=m.getText() %></p>
 <% } %>
 </body>
 </html>

@@ -9,7 +9,11 @@
 <body>
 <form action="/todoapp/Create" method="post">
 Title:<input type="text" name="title"><br>
-重要度:<input type="number" name="importance" min="1" max="5" value="3"><br>
+重要度:<select name="importance">
+<% for (int i=1;i<=5;i++){ %>
+	<option value="<%=i %>" <%=i==3? " selected":"" %>><%=i %></option>
+<%} %>
+</select><br>
 <button type="submit">登録</button>
 </form>
 </body>
