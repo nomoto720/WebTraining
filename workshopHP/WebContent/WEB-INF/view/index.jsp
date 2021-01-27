@@ -144,19 +144,19 @@
 			</div>
 			<h2 class=" text-center bg-info mt-5 pt-4 pb-4 text-white">お申込方法</h2>
 			<div class="container bg-white mt-4 mb-2 pt-5 pb-4 pr-5 pl-5">
-							<p class="appTitle text-center"><span class="text-info h2">? </span>お申込みフォームから応募</p>
+							<p class="appTitle text-center font-weight-bold"><span class="text-info h2">１ </span>お申込みフォームから応募</p>
 				<p class="text-center mt-3">※応募締切 4月29日23時まで</p>
 				<div class="text-center"><button class="btn btn-primary btn-xl" id="sendMessageButton" onclick="location.href='/workshopHP/FormMain'" >お申込フォーム ＞</button></div>
 			</div>
-			<p class="text-center h3 text-info">??</p>
+			<p class="text-center h3 text-info font-weight-bold">↓</p>
 			<div class="container bg-white mt-2 mb-2 pt-5 pb-4 pr-5 pl-5">
-				<p class="appTitle text-center"><span class="text-info h2">? </span>書類審査</p>
+				<p class="appTitle text-center"><span class="text-info h2 font-weight-bold">２ </span>書類審査</p>
 				<p class="text-center mt-3">書類審査の上、結果をメールにて通知します。</p>
 				<p class="text-center">※選考結果の理由についてはお答え出来ませんのでご了承ください。</p>
 			</div>
-			<p class="text-center h3 text-info">??</p>
+			<p class="text-center h3 text-info font-weight-bold">↓</p>
 			<div class="container bg-white mt-2 mb-2 pt-5 pb-4 pr-5 pl-5">
-				<p class="appTitle text-center"><span class="text-info h2">? </span>受講料のお支払い</p>
+				<p class="appTitle text-center"><span class="text-info h2 font-weight-bold">３ </span>受講料のお支払い</p>
 				<p class="text-center mt-3">通過通知を受けとった方は、コース費用を指定の銀行口座に指定の期日までにお振込ください。
 				追って講座の詳細をお送りします。</p>
 			</div>
@@ -164,7 +164,7 @@
 		<section class="page-section  mb-0" id="contact">
 		<div class="container">
 		<!-- Contact Section Form-->
-		<div class="container p-lg-5 bg-light">
+		<div class="container p-lg-5 bg-light ">
 		<!-- Contact Section Heading-->
                 <h2 class="text-center">CONTACT</h2>
 				<p class="text-center sabTitle mb-4">お問合せ</p>

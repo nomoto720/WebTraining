@@ -1,8 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ page import="model.Profile" %>
+    pageEncoding="UTF-8" import="model.Profile" %>
 <%
 Profile pro=(Profile)session.getAttribute("profile");
+String name=pro==null?"":pro.getName();
+String furigana=pro==null?"":pro.getFurigana();
+String emailAdd=pro==null?"":pro.getEmailAdd();
+String selfPR=pro==null?"":pro.getSelfPR();
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -27,18 +30,8 @@ Profile pro=(Profile)session.getAttribute("profile");
         <nav class="navbar navbar-expand-lg bg-info  fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="/workshopHP/Main">Workshop Studio</a>
-                <button class="navbar-toggler navbar-toggler-right  text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/workshopHP/Main #about">WSについて</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/workshopHP/WEB-INF/view/index.jsp #portfolio">講師紹介</a></li>
-						 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.jsp #course">コース紹介</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.jsp #contact">お問い合わせ</a></li>
-                    </ul>
-                </div>
+
+
             </div>
         </nav>
         <!-- Masthead-->
@@ -47,20 +40,20 @@ Profile pro=(Profile)session.getAttribute("profile");
 <br>
 <div class="container mt-5 pt-4 p-lg-5 bg-light">
 
-    <form class="needs-validation" novalidate action="/workshopHP/FormMain" method="post">
+    <form class="needs-validation" novalidate action="/workshopHP/FormMain" method="post" enctype="multipart/form-data">
     <div class=" p-2 mb-3 mr-0 bg-info text-white">ワークショップ 申込フォーム</div>
         <!--氏名-->
      <div class="form-group row">
                 <label  class="ml-3 mr-3 col-form-label">お名前</label>
                 <div class="col-sm-6">
-                        <input type="text" name="name" class="form-control" value="<%=pro.getName() %>" placeholder="例：山田 太郎" required>
+                        <input type="text" name="name" class="form-control" value="<%=name %>" placeholder="例：山田 太郎" required>
                 <div class="invalid-feedback">入力してください</div>
             </div>
              </div>
             <div class="form-group row">
                     <label class="ml-3 col-form-label">ふりがな</label>
              <div class="col-sm-6">
-                        <input type="text" name="furigana" class="form-control" placeholder="例：やまだ たろう" required>
+                        <input type="text" name="furigana" class="form-control" value="<%=furigana %>" placeholder="例：やまだ たろう" required>
                 <div class="invalid-feedback">入力してください</div>
             </div>
          </div>
@@ -89,7 +82,7 @@ Profile pro=(Profile)session.getAttribute("profile");
         <div class="form-group row">
             <label  class="ml-3 mr-2 col-form-label">Eメール</label>
             <div class="col-sm-6">
-                        <input type="email" name="emailAdd" class="form-control" placeholder="例：chita@mail.com" required>
+                        <input type="email" name="emailAdd" class="form-control" value="<%=emailAdd %>" placeholder="例：chita@mail.com" required>
                 <div class="invalid-feedback">入力してください</div>
             </div>
         </div>
@@ -195,13 +188,22 @@ Profile pro=(Profile)session.getAttribute("profile");
 		</div>
         <!--/ファイル選択-->
         --%>
+
+        <div class="form-group row">
+			<label for="imgname" class="ml-3 mr-2 col-form-label">顔写真</label>
+			<div class="col-sm-6">
+			<input type="file" name="imgname" id="imgname"  class="form-control" >
+			<div class="invalid-feedback">入力してください</div>
+			</div>
+		</div>
+
         <!--メッセージ-->
         <div class="form-group row">
             <label class="ml-3 mr-2 col-form-label">自己PR</label>
 			<div class="col-sm-10">
-            <textarea class="form-control" name="selfPR" rows="3" placeholder="自己PRと演技経験を具体的にお書きください。" required></textarea>
+            <textarea class="form-control" name="selfPR" rows="3"  placeholder="自己PRと演技経験を具体的にお書きください。" required><%=selfPR %></textarea>
             <div class="invalid-feedback">入力してください</div>
-										</div>
+			</div>
         </div>
         <!--/メッセージ-->
         <!--ボタンブロック-->

@@ -27,10 +27,6 @@ Profile pro=(Profile)session.getAttribute("profile");
         <nav class="navbar navbar-expand-lg bg-info  fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="/workshopHP/Main">Workshop Studio</a>
-                <button class="navbar-toggler navbar-toggler-right  text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
             </div>
         </nav>
         <!-- Masthead-->
@@ -39,7 +35,7 @@ Profile pro=(Profile)session.getAttribute("profile");
 <br>
 <div class="container mt-5 pt-4 p-lg-5 bg-light">
 
-    <form class="needs-validation" novalidate action="result.jsp" method="post">
+    <form class="needs-validation" novalidate action="/workshopHP/Create" method="post">
     <div class=" p-2 mb-3 mr-0 bg-info text-white">確認画面</div>
         <!--氏名-->
      <div class="form-group row">
@@ -187,6 +183,16 @@ Profile pro=(Profile)session.getAttribute("profile");
 		</div>
         <!--/ファイル選択-->
         --%>
+
+        <div class="form-group row">
+			<label for="imgname" class="ml-3 mr-2 col-form-label">顔写真</label>
+			<div class="col-sm-6">
+			<input type="hidden" name="imgname" id="imgname" class="form-control" >
+			<img src="upload/<%=pro.getImgname() %>">
+			</div>
+		</div>
+
+
         <!--メッセージ-->
         <div class="form-group row">
             <label class="font-weight-bold ml-3 mr-2 col-form-label">自己PR</label>
@@ -200,6 +206,7 @@ Profile pro=(Profile)session.getAttribute("profile");
         <div class="form-group row">
             <div class="col-sm-12">
                 <button type="submit" class="btn btn-primary btn-block">送信</button>
+
             </div>
         </div>
 
