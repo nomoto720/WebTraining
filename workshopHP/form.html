@@ -6,29 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>お申込フォーム</title>
 
-    <!--Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!--Font Awesome5-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  
 
-    <!--自作CSS -->
-    <style type="text/css">
-        <!--
-        /*ここに調整CSS記述*/
-
-        -->
-    </style>
+ 	 <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-light navbar-dark bg-info">
-    <span class="navbar-brand">映像演技のワークショップ</span>
-</nav>
-
+   <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-info  fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="index.html">Workshop Studio</a>
+                <button class="navbar-toggler navbar-toggler-right  text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html #about">WSについて</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html #portfolio">講師紹介</a></li>
+						 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html #course">コース紹介</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html #contact">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
 <!-- Page Content -->
-<div class="container mt-5 p-lg-5 bg-light">
+<br>
+<br>
+<div class="container mt-5 pt-4 p-lg-5 bg-light">
 
-    <form class="needs-validation" novalidate action="result.php" method="post">
+    <form class="needs-validation" novalidate action="result.jsp" method="post">
     <div class=" p-2 mb-3 mr-0 bg-info text-white">ワークショップ 申込フォーム</div>
         <!--氏名-->
      <div class="form-group row">
@@ -47,29 +60,28 @@
          </div>  
         <!--/氏名-->
          <!--性別-->
-        <div class="form-group">
-            <div class="row mb-4">
-                <legend class="col-form-label col-sm-1">性別</legend>
-                <div class="col-sm-10 mt-2 ">
+        <div class="form-group row   ">
+                <label class="ml-3 mr-3 col-form-label ">性　別</label>
+                <div class="col-sm-10 mt-2">
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline1" name="gender" class="custom-control-input" required>
+                        <input type="radio"  name="gender" class="custom-control-input" required>
                         <label class="custom-control-label" for="customRadioInline1">女性</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline2" name="gender" class="custom-control-input">
+                        <input type="radio"  name="gender" class="custom-control-input">
                         <label class="custom-control-label" for="customRadioInline2">男性</label>
                     </div>
                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline3" name="gender" class="custom-control-input">
+                        <input type="radio"  name="gender" class="custom-control-input">
                         <label class="custom-control-label" for="customRadioInline3">その他</label>
                     </div>
                 </div>
-            </div>
+          
         </div>
         <!--/性別-->
         <!--Eメール-->
         <div class="form-group row">
-            <label  class="ml-3 mr-2 col-form-label">E-mail</label>
+            <label  class="ml-3 mr-2 col-form-label">Eメール</label>
             <div class="col-sm-6">
                         <input type="email" name="emailAdd" class="form-control" placeholder="例：chita@mail.com" required>
                 <div class="invalid-feedback">入力してください</div>
@@ -94,7 +106,7 @@
             </div>
         </div>
         <div class="form-group row">
-            <label class="ml-3 mr-4 col-form-label">住 所</label>
+            <label class="ml-3 mr-3 col-form-label">住　所</label>
              <div class="col-sm-10">
                         <input type="text" name="inputAddress03" class="form-control" placeholder="例：中央区日本橋人形町" required>
                 <div class="invalid-feedback">入力してください</div>
@@ -104,7 +116,7 @@
         <!--お問い合わせ先-->
         <div class="form-group row">
             <label class="ml-3  col-form-label">電話番号</label>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                         <input type="tel" class="form-control" name="inputTell" size="12" maxlength="20"  placeholder="例：03-123-4567" required>
                 <div class="invalid-feedback">入力してください</div>
             </div>
@@ -112,164 +124,79 @@
         <!--/お問い合わせ先-->
                 <br>
         <!--営業時間1-->
-        <div class="form-row mb-1s">
-            <label class="  col-form-label">職業</label>
-            <div class="col-md-2">
-                <select name="storeDay" class="form-control" required>>
-                    <option value="全日">会社員</option>
-                    <option value="平日">会社員/一般事務職</option>
-                    <option value="休日">会社員/営業・販売・サービス業</option>
-                    <option value="月曜日">会社員/コンピューター・技術開発職</option>
-                    <option value="火曜日">専門職</option>
-                    <option value="水曜日">専門事務職</option>
-                   <option value="木曜日">主婦・主夫</option>
-                   <option value="金曜日">学生</option>
-                    <option value="土曜日">派遣社員</option>
-                   <option value="日曜日">アルバイト・パート</option>
-                    <option value="金曜日">映画・テレビ</option>
-                    <option value="土曜日">編集・出版</option>
-                   <option value="日曜日">フリー・クリエイティブ職</option>
-                    <option value="日曜日">公務員・団体職員</option>
-                    <option value="日曜日">自営業</option>
-                    <option value="日曜日">無職</option>
-                      <option value="日曜日">その他</option>
+        <div class="form-group row ">
+            <label class="col-form-label ml-3 mr-3">職　業</label>
+            <div class="col-sm-8">
+                <select name="profession" class="form-control" required>>
+                    <option value="会社員">会社員</option>
+                    <option value="会社員/一般事務職">会社員/一般事務職</option>
+                    <option value="会社員/営業・販売・サービス">会社員/営業・販売・サービス業</option>
+                    <option value="会社員/コンピューター・技術開発職">会社員/コンピューター・技術開発職</option>
+                    <option value="専門職">専門職</option>
+                    <option value="専門事務職">専門事務職</option>
+                   <option value="主婦・主夫">主婦・主夫</option>
+                   <option value="学生">学生</option>
+                    <option value="派遣社員">派遣社員</option>
+                   <option value="アルバイト・パート">アルバイト・パート</option>
+                    <option value="映画・テレビ">映画・テレビ</option>
+                    <option value="編集・出版">編集・出版</option>
+                   <option value="フリー・クリエイティブ">フリー・クリエイティブ職</option>
+                    <option value="公務員・団体職員">公務員・団体職員</option>
+                    <option value="自営業">自営業</option>
+                    <option value="無職">無職</option>
+                      <option value="その他">その他</option>
                 </select>
                 <div class="invalid-feedback">
                     入力してください
                 </div>
             </div>
-                <label class="ml-3  col-form-label">開店時間</label>
-                <div class="col-md-2">
-                        <input type="time" class="form-control" name="openingTime" value="<?php if(isset($openingTime)){ echo $openingTime;} ?>" placeholder="例：15:00" >
-                <div class="invalid-feedback">
-                    入力してください
+        </div>
+		<!-- 所属事務所-->
+		 <div class="form-group row">
+            <label  class="ml-3 col-form-label">所属事務所(ある方のみ)</label>
+            <div class="col-sm-6">
+                        <input type="text" name="office" class="form-control" placeholder="例：所属なし" required>  
             </div>
         </div>
-        <label class="ml-3  col-form-label">閉店時間</label>
-            <div class="col-md-2 mb-3">
-                        <input type="time" class="form-control" name="closeTime" value="<?php if(isset($closeTime)){ echo $closeTime;} ?>" placeholder="例：23:00" required>
-                <div class="invalid-feedback">
-                    入力してください
-                </div>
+		<!--/所属事務所-->
+		<!--所属事務所電話番号 -->
+		 <div class="form-group row">
+            <label class="ml-3 mr-4 col-form-label">所属事務所 電話番号</label>
+            <div class="col-sm-4">
+                        <input type="tel" class="form-control" name="officeTell" size="12" maxlength="20"  placeholder="例：03-123-4567" required>
             </div>
         </div>
-        <!--/営業時間-->
-        <!--営業時間2-->
-        <div class="form-row mb-3">
-            <label class="  col-form-label">営業日時2</label>
-            <div class="col-md-2">
-                <select name="storeDay2" class="form-control">
-                    <option value="未選択">未選択</option>
-                    <option value="全日">全日</option>
-                    <option value="平日">平日</option>
-                    <option value="休日">休日</option>
-                    <option value="">月曜日</option>
-                    <option value="">火曜日</option>
-                    <option value="">水曜日</option>
-                   <option value=""> 木曜日</option>
-                   <option value=""> 金曜日</option>
-                    <option value="">土曜日</option>
-                   <option value=""> 日曜日</option>
-                </select>
-                <div class="invalid-feedback">
-                    入力してください
-                </div>
-            </div>
-                <label class="ml-3  col-form-label">開店時間</label>
-                <div class="col-md-2">
-                        <input type="time" class="form-control" name="openTime2" value="<?php if(isset($openTime2)){ echo $openTime2;} ?>" placeholder="例：15:00" >
-                <div class="invalid-feedback">
-                    入力してください
-            </div>
-        </div>
-        <label class="ml-3  col-form-label">閉店時間</label>
-            <div class="col-md-2 mb-2">
-                        <input type="time" class="form-control" name="closeTime2" value="<?php if(isset($closeTime2)){ echo $closeTime2;} ?>" placeholder="例：24:00" >
-                <div class="invalid-feedback">
-                    入力してください
-                </div>
-            </div>
-        </div>
-        <!--/営業時間2-->
-        <!--ラストオーダー-->
-       <div class="form-row mb-3">
-            <label class="  col-form-label">料理ラストオーダー</label>
-                <div class="col-md-2">
-                        <input type="time" class="form-control" name="cookTime" value="<?php if(isset($cookTime)){ echo $cookTime;} ?>" placeholder="例：15:00" >
-                <div class="invalid-feedback">
-                    入力してください
-            </div>
-        </div>
-        <label class="ml-3  col-form-label">ドリンクラストオーダー</label>
-            <div class="col-md-2 mb-1">
-                        <input type="time" class="form-control" name="drinkTime" value="<?php if(isset($drinkTime)){ echo $drinkTime;} ?>" placeholder="例：24:00" >
-                <div class="invalid-feedback">
-                    入力してください
-                </div>
-            </div>
-        </div>
-        <!--/備考-->
-        <!--定休日-->
-        <label class=" mr-3 col-form-label">定休日</label>
-                <input type="checkbox" name="closeDay[]" value="月曜日" >月曜日
-                <input type="checkbox" class="ml-2" name="closeDay[]" value="火曜日">火曜日
-                <input type="checkbox" class="ml-2" name="closeDay[]" value="水曜日">水曜日
-                <input type="checkbox" class="ml-2" name="closeDay[]" value="木曜日">木曜日
-                <input type="checkbox" class="ml-2" name="closeDay[]" value="金曜日">金曜日
-                <input type="checkbox" class="ml-2" name="closeDay[]" value="土曜日">土曜日
-                <input type="checkbox" class="ml-2" name="closeDay[]" value="日曜日">日曜日
-                <input type="checkbox"  class="ml-2" name="closeDay[]" value="祝日">祝日
-        <!--/定休日-->
-                <br>
-                <br>
-        <!--クレジットカード-->
-                <label class=" mr-3 col-form-label">クレジットカード</label>
-                <input type="checkbox" name="card[]" value="不可" >不可
-                <input type="checkbox" class="ml-2" name="card[]" value="VISA">VISA
-                <input type="checkbox" class="ml-2" name="card[]" value="Master">Master
-                <input type="checkbox" class="ml-2" name="card[]" value="JCB">JCB
-                <input type="checkbox" class="ml-2" name="card[]" value="AMEX">AMEX
-                <input type="checkbox" class="ml-2" name="card[]" value="DC">DC
-                <input type="checkbox" class="ml-2" name="card[]" value="MUFG">MUFG
-                <input type="checkbox"  class="ml-2" name="card[]" value="NICOS">NICOS
-        <!--/クレジットカード-->
-        <!--定番メニュー-->
-        <!--/定番メニュー-->
-                <br> <br>
-        <!--店内の様子-->
-                <label for="card" class="col-form-label">[ 店内のレイアウト]</label><br>
-                <!--カウンター席-->
-                  <div class="form-row ">
-                    <label class="mt-1 mr-3 col-form-label">カウンター席</label>
-                    <div class="col-md-3">
-                    <input type="number" class="mt-1  form-control" name="counterNum" placeholder="カウンター席数" >
-                    </div>
-                    </div>
-                <!--テーブル席-->
-                <div class="form-row ">
-                    <label class="mt-1 mr-3  col-form-label">テーブル卓数</label>
-                    <div class="col-md-3">
-                    <input type="number" class="mt-1  form-control" name="tableNum" placeholder="テーブル卓数" >
-                    </div>
-                </div>
-                <!--お座敷-->
-                <div class="form-row ">
-                    <label class="mt-1 mr-5 col-form-label">お座敷数</label>
-                    <div class="col-md-3">
-                    <input type="number" class="mt-1 form-control" name="ozaNum" placeholder="お座敷数" >
-                    </div>
-                </div>
-                <br>
-                
-        <!--/店内の様子-->
-        <!--ファイル選択
-        <div class="custom-file mb-5">
-            <input type="file" class="custom-file-input pb-3" id="customFile" required>
+
+ <div class="form-group row">
+        <label class=" ml-3 mr-3 col-form-label">演技経験</label>
+<div class="mt-2 ">
+                <input type="checkbox" name="acting[]" value="月曜日" >なし
+				<input type="checkbox" class="ml-2" name="acting[]" value="水曜日">舞台
+                <input type="checkbox" class="ml-2" name="acting[]" value="火曜日">映画
+                <input type="checkbox" class="ml-2" name="acting[]" value="水曜日">テレビ
+               <input type="checkbox" class="ml-2" name="acting[]" value="水曜日">その他
+</div>
+</div>
+
+        <!--ファイル選択-->
+	<div class="form-group row">
+		 <label class="ml-3 mr-2 col-form-label">顔写真ファイル</label>
+      	<div class="col-sm-6">
+            <input type="file" class="custom-file-input pb-3" name="faceFile" required>
             <label class="custom-file-label pb-3" for="customFile">ファイル選択...</label>
             <div class="invalid-feedback">ファイルを選択してください</div>
         </div>
-        /ファイル選択-->
-
+		</div>
+        <!--/ファイル選択-->
+        <!--メッセージ-->
+        <div class="form-group row">
+            <label class="ml-3 mr-2 col-form-label">自己PR</label>
+			<div class="col-sm-10">
+            <textarea class="form-control" name="selfPR" rows="3" placeholder="自己PRと演技経験を具体的にお書きください。" required></textarea>
+            <div class="invalid-feedback">入力してください</div>
+										</div>
+        </div>
+        <!--/メッセージ-->
         <!--ボタンブロック-->
         <div class="form-group row">
             <div class="col-sm-12">
